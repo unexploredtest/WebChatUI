@@ -1,0 +1,436 @@
+<html lang="zh-CN">
+<head>
+	<title>display demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<!-- <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css"> -->
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="js/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#submit").click(function(){
+			console.log($("input").val());
+			var $inputcontent = $("input").val();
+			if($.isEmptyObject($inputcontent))
+			{
+				alert("请输入内容，然后提交");
+				return;
+			}
+			// 用户输入永远放在右边
+			var $template = "<div class='right_liaotian_block'><img src='res/touxiang1.jpg' alt='image' class='touxiang'><div class='duihuakuang'>"+$inputcontent+"<div></div></div></div>"
+			$("#liaotian").append($template);
+			// 滚动条位置
+			$("#liaotian").scrollTop(10000);
+			//清除输入框
+			$("input").val("");
+		})
+	})
+
+	// 注册按键监听函数
+	$(document).keydown(function(event) {
+		/* Act on the event */
+		if(event.keyCode==13)
+		{
+			var e = jQuery.Event("click");
+			$("#submit").trigger(e);
+		}
+	});
+
+
+</script>
+
+<style>
+.display_boarder
+{
+	border:1px solid #e1e1ea;
+}
+.display_boarder1
+{
+	border:1px solid #e1e1ea;
+}
+
+hr{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+
+.clear
+{
+	clear:both;
+}
+
+.verticalhalf
+{
+	width:100%;
+	height:50%;
+}
+
+.touxiang
+{
+    height: 180px;
+    width: 52%;
+    margin-left: 23%;
+    margin-right: 10%;
+    margin-top: 2%;
+
+}
+
+.renwudangan
+{
+	
+}
+
+ul.list-group span
+{
+	padding-left: 15%;
+}
+
+
+#liaotian img
+{
+	height:50px;
+	width:50px;
+}
+
+.leftfloat
+{
+	float:left;
+}
+
+
+
+.arrow_left
+{
+	width:0px;
+	height:0px;
+	border:solid 6px;
+	border-color:#fff #000 #fff #fff;
+	position:absolute;
+	top:6px;
+	left:-12px;
+}
+
+.arrow_right
+{
+	width:0px;
+	height:0px;
+	border:solid 6px;
+	border-color:#fff #fff #fff #000;
+	position:absolute;
+	top:6px;
+	right:-12px;
+}
+
+/*聊天表格的样式*/
+.left_liaotian_block
+{
+	position:relative;
+	height:80px;
+}
+
+.right_liaotian_block
+{
+	position:relative;
+	height:80px;
+}
+
+/*聊天中的头像*/
+div.left_liaotian_block > img
+{
+	margin-right:0px;
+	margin-left:0px;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+div.right_liaotian_block > img
+{
+	margin-right:0px;
+	margin-left:0px;
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+
+/*对话框*/
+div.left_liaotian_block > div
+{
+	position:absolute;
+	top:21px;
+	left:62px;
+	border-radius: 5px;
+	background-color: #00ff00;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+div.right_liaotian_block>div
+{
+	position:absolute;
+	top:21px;
+	right:62px;
+	border-radius: 5px;
+	background-color: #00ff00;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+/*箭头*/
+div.left_liaotian_block > div >div
+{
+	width:0px;
+	height:0px;
+	border:solid 6px;
+	border-color:#fff #00ff00 #fff #fff;
+	position:absolute;
+	top:6px;
+	left:-12px;
+}
+
+div.right_liaotian_block > div > div
+{
+	width:0px;
+	height:0px;
+	border:solid 6px;
+	border-color:#fff #fff #fff #00ff00;
+	position:absolute;
+	top:6px;
+	right:-12px;
+}
+
+</style>
+
+</head>
+
+
+<body style="background-color: #fff">
+<div class="container">
+	<div class="page-header display_boarder">
+	  <h1>Robot Demo<small></small></h1>
+	</div>
+
+	<div class="display_boarder" style="width:30%;height:100%;float:left">
+		<div class="display_boarder" style="width:100%;height:50%">
+			<!-- 选手信息1 -->
+			<div class="verticalhalf display_boarder">
+					<img src="res/1.jpg" alt="image" class="img-circle touxiang display_boarder">
+					<p class="text-center">史上最牛逼机器人</p>
+			</div>
+			<div class="verticalhalf display_boarder">	
+					<p class="text-center" style="height:20%;margin-top:5%;margin-bottom: 0px">人物档案</p>
+					<ul class="list-group" style="height:80%">
+					  <li class="list-group-item list-group-item-success">
+					  	<span class="glyphicon glyphicon-user">                            牛逼的机器人</span>
+					  </li>
+					  <li class="list-group-item list-group-item-info">
+						<span class="glyphicon glyphicon-envelope">   xxx.@gmail.com</span>
+					  </li>
+					  <li class="list-group-item list-group-item-warning">
+							<span class="glyphicon glyphicon-search"> @facebook</span></li>
+					  <li class="list-group-item list-group-item-danger">
+					  	<span class="glyphicon glyphicon-home">  my homepage</span>
+					  </li>
+					</ul>
+			</div>
+		</div>
+		<!-- 选手1信息结束 -->
+		<hr/>
+		<!-- 选手信息2 -->
+		<div class="display_boarder" style="width:100%;height:50%">
+					<div class="verticalhalf display_boarder">
+					<img src="res/2.jpg" alt="image" class="img-circle touxiang display_boarder">
+					<p class="text-center">史上最牛逼机器人2</p>
+			</div>
+			<div class="verticalhalf display_boarder">	
+					<p class="text-center" style="height:20%;margin-top:5%;margin-bottom: 0px">人物档案</p>
+					<ul class="list-group" style="height:80%">
+					  <li class="list-group-item list-group-item-success">
+					  	<span class="glyphicon glyphicon-user">                            牛逼的机器人2</span>
+					  </li>
+					  <li class="list-group-item list-group-item-info">
+						<span class="glyphicon glyphicon-envelope">   xxx.@gmail.com</span>
+					  </li>
+					  <li class="list-group-item list-group-item-warning">
+							<span class="glyphicon glyphicon-search"> @facebook</span></li>
+					  <li class="list-group-item list-group-item-danger">
+					  	<span class="glyphicon glyphicon-home">  my homepage</span>
+					  </li>
+					</ul>
+			</div>
+				
+		<!-- 选手2信息结束 -->
+
+		</div>
+	</div>
+
+	<div class="display_boarder1" style="width:70%;height:100%;float:left">
+		<div id="liaotian" class="display_boarder1" style="width:100%;height:96%;
+		overflow: scroll;">
+			<!-- 这里是聊天信息 -->
+			<!-- 一条聊天信息 -->
+			<div class="left_liaotian_block" >
+				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
+				
+				<div class="leftfloat duihuakuang" >
+				<!-- 这里是具体的聊天内容 -->
+				<div></div>
+				你好啊萨达舒服的沙发水电费水电费  
+				</div>
+			</div>
+
+
+			<!-- 另一条聊天信息 -->
+			<div class="right_liaotian_block">
+				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
+				
+				<div class="duihuakuang" >
+				<!-- 这里是具体的聊天内容 -->
+				你好啊萨达舒服的沙发水电费水
+				<div></div>
+				</div>
+			</div> 
+
+						<!-- 一条聊天信息 -->
+			<div class="left_liaotian_block" >
+				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
+				
+				<div class="leftfloat duihuakuang" >
+				<!-- 这里是具体的聊天内容 -->
+				<div ></div>
+				谢谢哈 
+				</div>
+			</div>
+
+
+						<!-- 另一条聊天信息 -->
+			<div class="right_liaotian_block">
+				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
+				<div class="duihuakuang" >
+				<!-- 这里是具体的聊天内容 -->
+				不客气啊
+				<div></div>
+				</div>
+			</div>
+
+									<!-- 一条聊天信息 -->
+			<div class="left_liaotian_block" >
+				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
+				
+				<div class="leftfloat duihuakuang" >
+				<!-- 这里是具体的聊天内容 -->
+				<div ></div>
+				谢谢哈 
+				</div>
+			</div>
+
+
+						<!-- 另一条聊天信息 -->
+			<div class="right_liaotian_block">
+				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
+				<div class="duihuakuang" >
+				<!-- 这里是具体的聊天内容 -->
+				不客气啊
+				<div></div>
+				</div>
+			</div>  
+
+									<!-- 一条聊天信息 -->
+			<div class="left_liaotian_block" >
+				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
+				
+				<div class="leftfloat duihuakuang" >
+				<!-- 这里是具体的聊天内容 -->
+				<div ></div>
+				谢谢哈 
+				</div>
+			</div>
+
+
+						<!-- 另一条聊天信息 -->
+			<div class="right_liaotian_block">
+				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
+				<div class="duihuakuang" >
+				<!-- 这里是具体的聊天内容 -->
+				不客气啊
+				<div></div>
+				</div>
+			</div> 
+
+									<!-- 一条聊天信息 -->
+			<div class="left_liaotian_block" >
+				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
+				
+				<div class="leftfloat duihuakuang" >
+				<!-- 这里是具体的聊天内容 -->
+				<div ></div>
+				谢谢哈 
+				</div>
+			</div>
+
+
+						<!-- 另一条聊天信息 -->
+			<div class="right_liaotian_block">
+				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
+				<div class="duihuakuang" >
+				<!-- 这里是具体的聊天内容 -->
+				不客气啊
+				<div></div>
+				</div>
+			</div> 
+
+												<!-- 一条聊天信息 -->
+			<div class="left_liaotian_block" >
+				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
+				
+				<div class="leftfloat duihuakuang" >
+				<!-- 这里是具体的聊天内容 -->
+				<div ></div>
+				这是啥啊
+				</div>
+			</div>
+
+									<!-- 另一条聊天信息 -->
+			<div class="right_liaotian_block">
+				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
+				<div class="duihuakuang" >
+				<!-- 这里是具体的聊天内容 -->
+				不知道啊
+				<div></div>
+				</div>
+			</div> 
+
+		</div>
+
+		<!-- 页面底部输入框 -->
+		<div>
+				<input type="text"  class="form-control" style="width:80%;float:left">
+				<button type="button" id="submit" class="btn btn-default btn-lg" style="width:20%;float:left;padding-bottom: 2px">
+				<span class="glyphicon glyphicon-send"></span>
+				</button>
+		</div>
+	</div>
+
+	
+	
+
+	</div>
+
+</div>
+
+</body>
+</html>
