@@ -5,5 +5,5 @@
 * support input message and roll up and down
 * easily understood code and modify it to your needs! 
 
-##how it looks like:
-![effect](https://github.com/LandyGuo/WebChatUI/blob/master/res/VisualEffect.jpg)
+
+## Modified for [GoW](https://github.com/aliPMPAINT/GoW) use

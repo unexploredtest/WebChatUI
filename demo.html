@@ -22,11 +22,11 @@
 			var $inputcontent = $("input").val();
 			if($.isEmptyObject($inputcontent))
 			{
-				alert("请输入内容，然后提交");
+				alert("No input");
 				return;
 			}
 			// 用户输入永远放在右边
-			var $template = "<div class='right_liaotian_block'><img src='res/touxiang1.jpg' alt='image' class='touxiang'><div class='duihuakuang'>"+$inputcontent+"<div></div></div></div>"
+			var $template = "<div class='right_liaotian_block'><img src='res/human.png' alt='image' class='touxiang'><div class='duihuakuang'>"+$inputcontent+"<div></div></div></div>"
 			$("#liaotian").append($template);
 			// 滚动条位置
 			$("#liaotian").scrollTop(10000);
@@ -219,200 +219,27 @@ div.right_liaotian_block > div > div
 
 
 <body style="background-color: #fff">
-<div class="container">
+<div class="container" style="">
 	<div class="page-header display_boarder">
-	  <h1>Robot Demo<small></small></h1>
+	  <h1>Chatbot</h1>
 	</div>
 
-	<div class="display_boarder" style="width:30%;height:100%;float:left">
-		<div class="display_boarder" style="width:100%;height:50%">
-			<!-- 选手信息1 -->
-			<div class="verticalhalf display_boarder">
-					<img src="res/1.jpg" alt="image" class="img-circle touxiang display_boarder">
-					<p class="text-center">史上最牛逼机器人</p>
-			</div>
-			<div class="verticalhalf display_boarder">	
-					<p class="text-center" style="height:20%;margin-top:5%;margin-bottom: 0px">人物档案</p>
-					<ul class="list-group" style="height:80%">
-					  <li class="list-group-item list-group-item-success">
-					  	<span class="glyphicon glyphicon-user">                            牛逼的机器人</span>
-					  </li>
-					  <li class="list-group-item list-group-item-info">
-						<span class="glyphicon glyphicon-envelope">   xxx.@gmail.com</span>
-					  </li>
-					  <li class="list-group-item list-group-item-warning">
-							<span class="glyphicon glyphicon-search"> @facebook</span></li>
-					  <li class="list-group-item list-group-item-danger">
-					  	<span class="glyphicon glyphicon-home">  my homepage</span>
-					  </li>
-					</ul>
-			</div>
-		</div>
-		<!-- 选手1信息结束 -->
-		<hr/>
-		<!-- 选手信息2 -->
-		<div class="display_boarder" style="width:100%;height:50%">
-					<div class="verticalhalf display_boarder">
-					<img src="res/2.jpg" alt="image" class="img-circle touxiang display_boarder">
-					<p class="text-center">史上最牛逼机器人2</p>
-			</div>
-			<div class="verticalhalf display_boarder">	
-					<p class="text-center" style="height:20%;margin-top:5%;margin-bottom: 0px">人物档案</p>
-					<ul class="list-group" style="height:80%">
-					  <li class="list-group-item list-group-item-success">
-					  	<span class="glyphicon glyphicon-user">                            牛逼的机器人2</span>
-					  </li>
-					  <li class="list-group-item list-group-item-info">
-						<span class="glyphicon glyphicon-envelope">   xxx.@gmail.com</span>
-					  </li>
-					  <li class="list-group-item list-group-item-warning">
-							<span class="glyphicon glyphicon-search"> @facebook</span></li>
-					  <li class="list-group-item list-group-item-danger">
-					  	<span class="glyphicon glyphicon-home">  my homepage</span>
-					  </li>
-					</ul>
-			</div>
-				
-		<!-- 选手2信息结束 -->
 
-		</div>
-	</div>
-
-	<div class="display_boarder1" style="width:70%;height:100%;float:left">
-		<div id="liaotian" class="display_boarder1" style="width:100%;height:96%;
+	<div class="display_boarder1" style="flex-grow: 1;">
+		<div id="liaotian" class="display_boarder1" style="width:100%;height:100%;border: 2px solid black; height:calc(100vh - 200px);
 		overflow: scroll;">
 			<!-- 这里是聊天信息 -->
 			<!-- 一条聊天信息 -->
 			<div class="left_liaotian_block" >
-				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
+				<img src="res/chatbot.png" alt="image" class="touxiang">
 				
 				<div class="leftfloat duihuakuang" >
 				<!-- 这里是具体的聊天内容 -->
 				<div></div>
-				你好啊萨达舒服的沙发水电费水电费  
+				Hi, how are you?  
 				</div>
 			</div>
 
-
-			<!-- 另一条聊天信息 -->
-			<div class="right_liaotian_block">
-				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
-				
-				<div class="duihuakuang" >
-				<!-- 这里是具体的聊天内容 -->
-				你好啊萨达舒服的沙发水电费水
-				<div></div>
-				</div>
-			</div> 
-
-						<!-- 一条聊天信息 -->
-			<div class="left_liaotian_block" >
-				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
-				
-				<div class="leftfloat duihuakuang" >
-				<!-- 这里是具体的聊天内容 -->
-				<div ></div>
-				谢谢哈 
-				</div>
-			</div>
-
-
-						<!-- 另一条聊天信息 -->
-			<div class="right_liaotian_block">
-				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
-				<div class="duihuakuang" >
-				<!-- 这里是具体的聊天内容 -->
-				不客气啊
-				<div></div>
-				</div>
-			</div>
-
-									<!-- 一条聊天信息 -->
-			<div class="left_liaotian_block" >
-				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
-				
-				<div class="leftfloat duihuakuang" >
-				<!-- 这里是具体的聊天内容 -->
-				<div ></div>
-				谢谢哈 
-				</div>
-			</div>
-
-
-						<!-- 另一条聊天信息 -->
-			<div class="right_liaotian_block">
-				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
-				<div class="duihuakuang" >
-				<!-- 这里是具体的聊天内容 -->
-				不客气啊
-				<div></div>
-				</div>
-			</div>  
-
-									<!-- 一条聊天信息 -->
-			<div class="left_liaotian_block" >
-				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
-				
-				<div class="leftfloat duihuakuang" >
-				<!-- 这里是具体的聊天内容 -->
-				<div ></div>
-				谢谢哈 
-				</div>
-			</div>
-
-
-						<!-- 另一条聊天信息 -->
-			<div class="right_liaotian_block">
-				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
-				<div class="duihuakuang" >
-				<!-- 这里是具体的聊天内容 -->
-				不客气啊
-				<div></div>
-				</div>
-			</div> 
-
-									<!-- 一条聊天信息 -->
-			<div class="left_liaotian_block" >
-				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
-				
-				<div class="leftfloat duihuakuang" >
-				<!-- 这里是具体的聊天内容 -->
-				<div ></div>
-				谢谢哈 
-				</div>
-			</div>
-
-
-						<!-- 另一条聊天信息 -->
-			<div class="right_liaotian_block">
-				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
-				<div class="duihuakuang" >
-				<!-- 这里是具体的聊天内容 -->
-				不客气啊
-				<div></div>
-				</div>
-			</div> 
-
-												<!-- 一条聊天信息 -->
-			<div class="left_liaotian_block" >
-				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
-				
-				<div class="leftfloat duihuakuang" >
-				<!-- 这里是具体的聊天内容 -->
-				<div ></div>
-				这是啥啊
-				</div>
-			</div>
-
-									<!-- 另一条聊天信息 -->
-			<div class="right_liaotian_block">
-				<img src="res/touxiang1.jpg" alt="image" class="touxiang">
-				<div class="duihuakuang" >
-				<!-- 这里是具体的聊天内容 -->
-				不知道啊
-				<div></div>
-				</div>
-			</div> 
 
 		</div>
 
